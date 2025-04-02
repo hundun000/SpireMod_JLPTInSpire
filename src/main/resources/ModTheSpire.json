@@ -1,14 +1,14 @@
 {
-  "modid": "CET46InSpire",
-  "name": "CET46 In Spire",
+  "modid": "JLPTInSpire",
+  "name": "JLPT In Spire",
   "author_list": ["__name__"],
-  "description": "Do not forget CET46! \n别忘了四六级！",
-  "version": "1.0.1",
+  "description": "Do not forget JLPT! \n准备去散步！",
+  "version": "0.0.1",
   "sts_version": "01-23-2019",
   "mts_version": "3.7.0",
   "dependencies": ["basemod", "stslib"],
   "optional_dependencies": ["downfall"],
-  "credits": "Csx_QAQ_",
+  "credits": "hundun000",
   "update_json": ""
 }
 

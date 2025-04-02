@@ -35,11 +35,15 @@ def parse(note: tuple) -> list:
 def meaning_parse(html: str, meaning: str, speech: str) -> list:
     html = html.replace('"', "'")
     if not (meaning_start := re.search(meaning, html)):
-        return meaning_parse_2(html)
+        return meaning_parse_3(html)
     meaning_end = re.search('</div>', html[meaning_start.end():])
     meaning = html[meaning_start.end():meaning_start.end()+meaning_end.start()]
     meanings = meaning.split(speech)
     return post_parse(meanings)
+
+def meaning_parse_3(html: str) -> list:
+    parts = html.split("\x1f")
+    return [parts[6]]
 
 def meaning_parse_2(html: str) -> list:
     soup = BeautifulSoup(html, 'html.parser')
@@ -110,13 +114,13 @@ def save(file_path: str, data: dict) -> None:
         file.write(json.dumps(data, indent=4, ensure_ascii=False))
     
 if __name__ == '__main__':
-    zip_path = 'cet6.apkg'
+    zip_path = 'NEW-JLPT__NEW-N5.apkg'
     target = 'collection.anki21'
     if not extract_file(zip_path, target):
         raise Exception()
     tmp = select_all(target)
     a = [parse(note) for note in tmp]
-    save('CET6.json', toUIString(a, 'CET6'))
+    save('../src/main/resources/CET46Resource/vocabulary/N5.json', toUIString(a, 'N5'))
     
         
     

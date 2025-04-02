@@ -5,17 +5,17 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>__name__</groupId>
-    <artifactId>CET46InSpire</artifactId>
+    <artifactId>JLPTInSpire</artifactId>
     <version>1.0-SNAPSHOT</version>
     <packaging>jar</packaging>
-    <name>CET46InSpire</name>
-    <description>Do not forget CET46!</description>
+    <name>JLPTInSpire</name>
+    <description>Do not forget JLPT!</description>
     <properties>
         <maven.compiler.source>1.8</maven.compiler.source>
         <maven.compiler.target>1.8</maven.compiler.target>
         <SlayTheSpire.version>01-27-2020</SlayTheSpire.version>
         <ModTheSpire.version>3.16.0</ModTheSpire.version>
-        <Steam.path>D:/SteamLibrary/steamapps</Steam.path>
+        <Steam.path>D:\software\Steam\steamapps</Steam.path>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
 
@@ -64,7 +64,7 @@
     </dependencies>
 
     <build>
-        <finalName>CET46InSpire</finalName>
+        <finalName>${project.artifactId}</finalName>
         <plugins>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
