@@ -126,7 +126,7 @@ public abstract class CETRelic extends CustomRelic implements ClickableRelic {
         if (MathUtils.random(0, 99) < CET46Panel.band4RateIn6 || bookConfig.lowerLevelBooks.isEmpty()) {
             this.addToTop(new GeneralQuizAction(bookConfig));
         } else {
-            // TODO
+            // TODO 从所有lowerLevelBooks中使用某种策略选其一
             this.addToTop(new GeneralQuizAction(CET46Initializer.loadBooks.get(bookConfig.lowerLevelBooks.get(0))));
         }
     };

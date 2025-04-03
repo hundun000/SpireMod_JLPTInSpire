@@ -2,9 +2,6 @@ package CET46InSpire.ui;
 
 import CET46InSpire.CET46Initializer;
 import CET46InSpire.events.CallOfCETEvent.BookEnum;
-import CET46InSpire.relics.BookOfCET4;
-import CET46InSpire.relics.BookOfCET6;
-import CET46InSpire.relics.BookOfN5;
 import basemod.EasyConfigPanel;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
 
